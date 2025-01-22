@@ -1,4 +1,7 @@
+//NEXT SMALLERELEMENT IN THE ARRAY
+
 #include<stack>
+#include<vector>
 vector<int> nextSmallerElement(vector<int> &arr, int n)
 {
     // Write your code here.
