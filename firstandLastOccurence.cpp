@@ -66,6 +66,14 @@ int lastOcc(int arr[], int n, int key)
     }
 }
 
+int totalOcc(int arr[],int n,int k){
+   int ans = 0; 
+   int first = firstOcc(arr,n,k);
+   int last= lastOcc(arr,n,k);
+
+   ans = last - first + 1; 
+   return ans; 
+}
 
 int main()
 {  
