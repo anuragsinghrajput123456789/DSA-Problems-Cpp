@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>  
 #include<vector>
 
-bool isPossibleAnswer(int n, int m, long long int mid, vector<int> time) {
+bool isPossibleAnswer(int n, int m, long long int mid, int time[]) {
 
  
 
@@ -43,7 +43,7 @@ bool isPossibleAnswer(int n, int m, long long int mid, vector<int> time) {
 
  
 
-long long ayushGivesNinjatest(int n, int m, vector<int> time) {
+long long ayushGivesNinjatest(int n, int m, int time[]) {
 
   long long s = 0;
 
