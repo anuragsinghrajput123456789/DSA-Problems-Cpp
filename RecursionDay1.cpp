@@ -34,7 +34,6 @@ int RecSum(int *arr,int n){
     // cout << sum << endl;
     
     
-    cout << search(arr,n,key); 
   
   
     return 0;
