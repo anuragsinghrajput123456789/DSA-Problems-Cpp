@@ -1,6 +1,6 @@
 //LAREGEST  AREA OF RECTANGLE
 #include<bits/stdc++.h>
-
+#include<vector.h>
 class Solution {
 private: 
     vector<int> nextSmallerElement(vector<int> &arr, int n) {
@@ -8,6 +8,7 @@ private:
         s.push(-1);
         vector<int> ans(n);
 
+        
         for (int i = n - 1; i >= 0; i--) {
             int curr = arr[i]; 
             while (s.top() != -1 && arr[s.top()] >= curr) {
