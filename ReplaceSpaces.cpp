@@ -1,6 +1,6 @@
 //REPLACES SPACES WITH CHARACHERTS SPECIAL @
 #include <bits/stdc++.h> 
-
+#include<string>
 string replaceSpaces(string &str){
 	// Write your code here.
    string temp = "";
@@ -16,4 +16,10 @@ string replaceSpaces(string &str){
 	 }
    }
    return temp;
+}
+
+int main(){
+
+
+   return 0; 
 }
