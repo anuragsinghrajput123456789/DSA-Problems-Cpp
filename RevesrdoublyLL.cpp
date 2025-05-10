@@ -85,16 +85,13 @@ class Solution {
        curr = curr->prev; 
     }
 
-    return tail->prev; 
+    return tail->prev;
  }
 };
 
 
-
-//{ Driver Code Starts.
-
-// Driver code
 int main() {
+    
     int t;
     cin >> t;
     cin.ignore();
