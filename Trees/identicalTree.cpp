@@ -3,9 +3,10 @@ using namespace std;
 class Node
 {
 
-    Node* left; 
-    Node* right; 
+    Node *left;
+    Node *right;
     int data;
+
 public:
     // Function to check if two trees are identical.
     bool isIdentical(Node *r1, Node *r2)
