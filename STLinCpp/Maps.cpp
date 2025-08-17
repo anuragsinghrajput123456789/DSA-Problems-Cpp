@@ -115,14 +115,14 @@ int main() {
     map2[50] = "fifty";
 
     cout << "Before swap:" << endl;
-    cout << "  Map1 elements: "; for(auto const& [key, val] : map1) cout << "(" << key << ":" << val << ") "; cout << ", size: " << map1.size() << endl;
-    cout << "  Map2 elements: "; for(auto const& [key, val] : map2) cout << "(" << key << ":" << val << ") "; cout << ", size: " << map2.size() << endl;
+    cout << "  Map1 elements: "; for(auto const& it : map1) cout << "(" << it.first << ":" << it.second << ") "; cout << ", size: " << map1.size() << endl;
+    cout << "  Map2 elements: "; for(auto const& it : map2) cout << "(" << it.first << ":" << it.second << ") "; cout << ", size: " << map2.size() << endl;
 
     map1.swap(map2);
 
     cout << "After swap:" << endl;
-    cout << "  Map1 elements: "; for(auto const& [key, val] : map1) cout << "(" << key << ":" << val << ") "; cout << ", size: " << map1.size() << endl; // Map1 now has elements of original Map2
-    cout << "  Map2 elements: "; for(auto const& [key, val] : map2) cout << "(" << key << ":" << val << ") "; cout << ", size: " << map2.size() << endl; // Map2 now has elements of original Map1
+    cout << "  Map1 elements: "; for(auto const& it : map1) cout << "(" << it.first << ":" << it.second << ") "; cout << ", size: " << map1.size() << endl; // Map1 now has elements of original Map2
+    cout << "  Map2 elements: "; for(auto const& it : map2) cout << "(" << it.first << ":" << it.second << ") "; cout << ", size: " << map2.size() << endl; // Map2 now has elements of original Map1
 
 
     cout << "\n--- 6. Clearing the Map ---" << endl;
