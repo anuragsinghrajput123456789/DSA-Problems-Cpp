@@ -1,56 +1,72 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int binarySearch(int *arr,int n,int key){
-  int s = 0; 
-  int e = n - 1;
-  int mid = s + (e - s)/2;
+// Iterative Binary Search (returns index or -1)
+int binarySearch(int *arr, int n, int key) {
+    int s = 0; 
+    int e = n - 1;
 
-  while(s <= e){
-    if(arr[mid] == key){
-      return mid;
+    while (s <= e) {
+        int mid = s + (e - s) / 2;
+
+        if (arr[mid] == key) {
+            return mid;
+        }
+        if (arr[mid] < key) {
+            // Search right half
+            s = mid + 1;
+        } else {
+            // Search left half
+            e = mid - 1; 
+        }
     }
-    
-    if(arr[mid] < key){
-      //right me jaa bhai..
-      s = mid + 1;
-    }
-    else{
-      e = mid - 1; 
-    }
-  }
-  return -1; 
+    return -1; 
 }
 
-bool recursiveBinarySearch(int *arr,int n,int s,int e,int key){
-  
-  int mid = s + (e - s)/2;
-  
-  //base case
+// Recursive Binary Search (returns true/false)
+bool recursiveBinarySearch(int *arr, int s, int e, int key) {
+    // Base case: Not found
+    if (s > e) return false;
 
-  if(s > e) return false; 
-  
-  
-  if(arr[mid] == key) return true;
-  
-  if(arr[mid] < key){
-    s = mid + 1;
-  }
-  else{
-    e = mid - 1;
-  }
+    int mid = s + (e - s) / 2;
+
+    // Base case: Found
+    if (arr[mid] == key) return true;
+
+    if (arr[mid] < key) {
+        // Search right half
+        return recursiveBinarySearch(arr, mid + 1, e, key);
+    } else {
+        // Search left half
+        return recursiveBinarySearch(arr, s, mid - 1, key);
+    }
 }
 
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 4, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-int main(){
-  int arr[] = {1,2,3,4,5,6,4,5,6};
-  int n = sizeof(arr)/sizeof(arr[0]);
-  
-  
-  cout << recursiveBinarySearch(arr,n,0,n-1,6);
-  
-  
-  
-  
-  return 0; 
+    // Sort array before applying binary search
+    sort(arr, arr + n);
+
+    cout << "Sorted Array: ";
+    for (int i = 0; i < n; i++) cout << arr[i] << " ";
+    cout << endl;
+
+    int key = 6;
+
+    // Iterative Search
+    int idx = binarySearch(arr, n, key);
+    if (idx != -1)
+        cout << "Iterative: Found " << key << " at index " << idx << endl;
+    else
+        cout << "Iterative: Key not found" << endl;
+
+    // Recursive Search
+    if (recursiveBinarySearch(arr, 0, n - 1, key))
+        cout << "Recursive: Found " << key << endl;
+    else
+        cout << "Recursive: Key not found" << endl;
+
+    return 0;
 }
