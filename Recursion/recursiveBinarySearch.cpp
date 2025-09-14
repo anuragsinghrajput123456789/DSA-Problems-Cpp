@@ -60,7 +60,7 @@ int main() {
     if (idx != -1)
         cout << "Iterative: Found " << key << " at index " << idx << endl;
     else
-        cout << "Iterative: Key not found" << endl;
+        cout << "Iterative: Key not foundre" << endl;
 
     // Recursive Search
     if (recursiveBinarySearch(arr, 0, n - 1, key))
