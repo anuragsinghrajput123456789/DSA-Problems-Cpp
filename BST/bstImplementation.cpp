@@ -84,7 +84,7 @@ int max(node* p1){
   while(temp->left != nullptr){
     temp = temp->left;
   }
-  return temp->data << endl; 
+  return temp->data; 
 }
 
 int min(node* p1){
@@ -93,7 +93,7 @@ int min(node* p1){
   while(temp->right){
     temp = temp->right;
   }
-  return temp->data << endl;
+  return temp->data;
 }
 
 
