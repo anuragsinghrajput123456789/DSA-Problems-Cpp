@@ -6,15 +6,17 @@ void selectionSort(int arr[],int n){
         int minIndex=i;
         for(int j=i+1;j<n;j++){
             if(arr[j]<arr[minIndex]){
-                minIndex=j;
+                minIndex = j;
             }
         }
         swap(arr[minIndex],arr[i]);
     }
 }
 
-int main()
-{
+int main(){
+
+
+
 
     return 0;
 }
