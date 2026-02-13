@@ -15,7 +15,7 @@ int main(){
     for(int x : v) cout<<x<<" ";
     cout<<endl;
 
-    cout<<"Binary search 3: "<<binary_search(v.begin(), v.end(), 3)<<endl;
+    cout << " Binary search 3 : "<<binary_search(v.begin(), v.end(), 3)<<endl;
 
 
 
@@ -26,8 +26,8 @@ int main(){
     dq.push_back(4);
     dq.push_front(1);
 
-    cout<<"Deque front: "<<dq.front()<<endl;
-    cout<<"Deque back: "<<dq.back()<<endl;
+    cout << "Deque front: " << dq.front() << endl;
+    cout << "Deque back: " << dq.back() << endl;
 
 
 
@@ -85,7 +85,8 @@ int main(){
 
 
     // ---------- SET ----------
-    set<int> s = {4,1,7,1,4}; // duplicates removed
+    set<int> s = {4,1,7,1,4}; 
+    // duplicates removed
 
     s.insert(9);
 
